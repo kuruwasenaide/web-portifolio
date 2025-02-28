@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
           i = (i + 1) % text.length;
           setTimeout(animateCursor, 1000);
         };
-        setTimeout(animateCursor, 5000);
+        setTimeout(animateCursor, 0);
       }
     
     // add hover effects for project cards
