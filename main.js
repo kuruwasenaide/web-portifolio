@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-links li');
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-links a');
-    
+
     // toggle navigation menu for mobile
     burger.addEventListener('click', () => {
         // toggle navigation
@@ -169,10 +169,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(typeWriter, 150);
             }
         };
-        
-        // start typing effect after 1 second
         setTimeout(typeWriter, 0);
     }
+
+    // animated main title
+    const glitch = document.querySelector('.glitch');
+    if (glitch) {
+        const text = glitch.innerText;
+        let i = 0;
+        
+        const animateCursor = () => {
+          const textArray = text.split('');
+          textArray[i] = '_';
+          glitch.innerText = textArray.join('');
+          i = (i + 1) % text.length;
+          setTimeout(animateCursor, 1000);
+        };
+        setTimeout(animateCursor, 5000);
+      }
     
     // add hover effects for project cards
     const projectCards = document.querySelectorAll('.project-card');
