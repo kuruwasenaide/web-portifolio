@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // form submission handling
+    // form submission handling (AI made)
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
