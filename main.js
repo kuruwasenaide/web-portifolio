@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // simulate api call
             setTimeout(() => {
-                alert('message sent successfully!');
+                alert('message not sent, try again later.');
                 contactForm.reset();
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
